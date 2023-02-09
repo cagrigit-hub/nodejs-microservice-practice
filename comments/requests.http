@@ -1,0 +1,10 @@
+### POST A COMMENT TO POST
+POST http://localhost:4001/posts/4/comments
+Content-Type: application/json
+
+{
+    "content" : "This is a comment"
+}
+
+### GET ALL COMMENTS FOR A POST
+GET http://localhost:4001/posts/4/comments
