@@ -1,0 +1,45 @@
+version: "v3"
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - ./client:/app
+  moderation:
+    build:
+      context: ./moderation
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - ./moderation:/app
+  query:
+    build:
+      context: ./query
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - ./query:/app
+  event-bus:
+    build:
+      context: ./event-bus
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - ./event-bus:/app
+  posts:
+    build:
+      context: ./posts
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - ./posts:/app
+
+  comments:
+    build:
+      context: ./comments
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - ./comments:/app
